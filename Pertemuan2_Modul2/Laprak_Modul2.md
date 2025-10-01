@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 2 - Pengenalan Bahas C++ (Bagian Kedua)</h1>
+# <h1 align="center">Laporan Praktikum Modul 2 - Pengenalan Bahasa C++ (Bagian Kedua)</h1>
 <p align="center">DZAKI KHOTHIR - 103112400113</p>
 
 ## Dasar Teori
