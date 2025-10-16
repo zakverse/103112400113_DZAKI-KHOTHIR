@@ -15,7 +15,7 @@ Terdapat beberapa jenis linked list seperti singly linked list, doubly linked li
 #define SLL_H
 #define Nil NULL
 
-#include <iostream>
+#include  <iostream> 
 using namespace std;
 
 struct mahasiswa {
