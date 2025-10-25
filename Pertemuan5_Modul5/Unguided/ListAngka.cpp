@@ -17,7 +17,7 @@ address alokasi(dataAngka x){
 
 void dealokasi(address p){
     delete p;
-    p = nullptr;
+    p = NULL;
 }
 
 void printList(linkedList L){
@@ -66,10 +66,10 @@ void insertAfter(linkedList &L, address p, address prec){
 int nbList(linkedList L){
     if(IsEmpty(L)){
         cout << "List Kosong" << endl ;
-        return;
+        return 0;
     }else{
         int count = 0;
-        address current = L.first;
+        address current = L.first;  
         while(current != NULL){
             count++;
             current = current->next;
@@ -94,10 +94,12 @@ void delAfter(linkedList &L, address &p, address prec){
 }
 
 void updateFirst(linkedList &L , dataAngka newVal){
-    L.first->angka = newVal;
+    if (!IsEmpty(L))
+        L.first->angka = newVal;
 }
 
 void updateLast(linkedList &L , dataAngka newVal){
+    if (IsEmpty(L)) return;
     address current = L.first;
     while(current->next != NULL){
         current = current->next;
@@ -106,17 +108,83 @@ void updateLast(linkedList &L , dataAngka newVal){
 }
 
 void updateAfter(linkedList &L, address prec , dataAngka newVal){
-    prec->next->angka = newVal;
+   if (prec != NULL && prec->next != NULL)
+        prec->next->angka = newVal;
 }
 
 void SearchByData(linkedList L, int data){
+    address current = L.first;
+    bool found = false ;
+    while (current != NULL){
+        if(current->angka == data){
+        cout << "Data " << data << " ditemukan di alamat " << current << endl;
+        found = true;
+    }
+    current = current->next;
+    }
 
+    if (!found){ cout << "Data " << data << " tidak ditemukan." << endl;}
 }
 
 void SearchByAddress(linkedList L, address node){
-
+    address current = L.first;
+    bool found = false;
+    while(current != NULL){
+        if(current == node){
+            cout << "Alamat " << node << " ditemukan dengan nilai " << current->angka << endl;
+            found = true;
+            break;
+        }
+        current = current->next;
+    }
+    if(!found){
+        cout << "Alamat " << node << " tidak ditemukan di list.\n";
+    }
 }
 
 void SearchByRange(linkedList L, int nilaiMin){
+    address current = L.first;
+    bool found = false;
+    cout << "Data dengan nilai >= " << nilaiMin << ":\n";
+    while(current != NULL){
+        if(current->angka >= nilaiMin){
+            cout << "  " << current->angka << " (alamat " << current << ")\n";
+            found = true;
+        }
+        current = current->next;
+    }
+    if(!found){
+        cout << "Tidak ada data di atas " << nilaiMin << endl;
+    }
+}
 
+
+int Tambah(linkedList L){
+    int total = 0;
+    address current = L.first;
+    while(current != NULL){
+        total = total + current->angka;
+        current = current->next;
+    }
+    return total;
+}
+
+int Kurang(linkedList L){
+    int total = 0;
+    address current = L.first;
+    while(current != NULL){
+        total = total - current->angka;
+        current = current->next;
+    }
+    return total;
+}
+
+int Kali(linkedList L){
+    int total = 1;
+    address current = L.first;
+    while(current != NULL){
+        total = total * current->angka;
+        current = current->next;
+    }
+    return total;
 }

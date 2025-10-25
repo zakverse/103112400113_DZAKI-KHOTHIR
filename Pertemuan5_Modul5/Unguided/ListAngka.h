@@ -30,7 +30,12 @@ bool IsEmpty(linkedList L);
 void updateFirst(linkedList &L , dataAngka newVal);
 void updateLast(linkedList &L , dataAngka newVal);
 void updateAfter(linkedList &L, address prec, dataAngka newVal);
+
 void SearchByData(linkedList L, int data);
 void SearchByAddress(linkedList L, address node);
 void SearchByRange(linkedList L, int nilaiMin);
+
+int Tambah(linkedList L);
+int Kurang(linkedList L);
+int Kali(linkedList L);
 #endif
