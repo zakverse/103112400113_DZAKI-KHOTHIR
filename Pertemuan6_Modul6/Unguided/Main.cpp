@@ -2,38 +2,77 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main() {
     List L;
     CreateList(L);
+    int n;
+    cout << "Berapa banyak data kendaraan yang ingin dimasukkan? ";
+    cin >> n;
+    cin.ignore();
 
-    address P1 = Alokasi("B1234AA", "Merah", 2010);
-    address P2 = Alokasi("D5678BB", "Hitam", 2015);
-    address P3 = Alokasi("E9999CC", "Putih", 2020);
+    for (int i = 0; i < n; i++) {
+        string nopol, warna;
+        int tahun;
 
-    Insertlast(L, P1);
-    Insertlast(L, P2);
-    Insertlast(L, P3);
+        cout << "\nMasukkan nomor polisi: ";
+        getline(cin, nopol);
+        cout << "Masukkan warna kendaraan: ";
+        getline(cin, warna);
+        cout << "Masukkan tahun kendaraan: ";
+        cin >> tahun;
+        cin.ignore();
 
-    cout << "\n== Setelah Insert ==" << endl;
+        // cek duplikat nopol
+        if (FindElm(L, nopol) != NULL) {
+            cout << "Nomor polisi sudah terdaftar!\n";
+        } else {
+            address P = Alokasi(nopol, warna, tahun);
+            Insertlast(L, P);
+        }
+    }
+
+    cout << "\nDATA LIST 1" << endl;
     PrintInfo(L);
 
-    address cari = FindElm(L, "D5678BB");
-    if (cari != NULL)
-        cout << "\nData ditemukan: " << cari->Info.nopol << " - " << cari->Info.warna << endl;
+    
+    string cariNopol;
+    cout << "\nMasukkan Nomor Polisi yang dicari: ";
+    getline(cin, cariNopol);
 
-    deleteFirst(L, P1);
-    cout << "\n== Setelah deleteFirst ==" << endl;
+    address hasil = FindElm(L, cariNopol);
+    if (hasil != NULL) {
+        cout << "\n====================================================" << endl;
+        cout << "Nomor Polisi : " << hasil->Info.nopol << endl;
+        cout << "Warna        : " << hasil->Info.warna << endl;
+        cout << "Tahun        : " << hasil->Info.thnBuat << endl;
+        cout << "====================================================" << endl;
+
+    } else {
+        cout << "Data tidak ditemukan.\n";
+    }
+
+   
+    string hapusNopol;
+    cout << "\nMasukkan Nomor Polisi yang akan dihapus: ";
+    getline(cin, hapusNopol);
+
+    address del = FindElm(L, hapusNopol);
+    if (del == NULL) {
+        cout << "Data tidak ditemukan.\n";
+    } else if (del == L.head) {
+        deleteFirst(L, del);
+        cout << "Data dengan nomor polisi " << hapusNopol << " berhasil dihapus (FIRST)." << endl;
+    } else if (del == L.tail) {
+        deleteLast(L, del);
+        cout << "Data dengan nomor polisi " << hapusNopol << " berhasil dihapus (LAST)." << endl;
+    } else {
+        address prec = del->prev;
+        deleteAfter(prec, del);
+        cout << "Data dengan nomor polisi " << hapusNopol << " berhasil dihapus (AFTER)." << endl;
+    }
+
+    cout << "\nDATA LIST 1 setelah penghapusan" << endl;
     PrintInfo(L);
 
-    deleteLast(L, P3);
-    cout << "\n== Setelah deleteLast ==" << endl;
-    PrintInfo(L);
-
-    cari = FindElm(L, "D5678BB");
-    if (cari != NULL)
-        deleteAfter(cari, P2);
-
-    cout << "\n== Setelah deleteAfter ==" << endl;
-    PrintInfo(L);
-
+    return 0;
 }

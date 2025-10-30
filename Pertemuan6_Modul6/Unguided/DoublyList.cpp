@@ -27,11 +27,12 @@ void PrintInfo(List l){
     if (IsEmpty(l)){cout << " List Kosong " << endl ; return;}
 
     address current = l.head ;
-    cout << "\n===DATA LIST==" << endl;
+    cout << "\n======= DATA LIST =======" << endl;
     while (current != NULL){
         cout << "Nomor Polisi\t: " << current->Info.nopol << endl;
         cout << "Warna Kendaraan\t: " << current->Info.warna << endl;
         cout << "Tahun Buat\t: " << current->Info.thnBuat << endl;
+        cout << "========================" << endl;
         current = current->next;
     }
     
@@ -49,7 +50,6 @@ void Insertlast(List &l, address p){
 }
 address FindElm(List l , string nopol){
     if (IsEmpty(l)){
-        cout << " List Kosong " << endl ; 
         return NULL;
     }
     address current = l.head ;
