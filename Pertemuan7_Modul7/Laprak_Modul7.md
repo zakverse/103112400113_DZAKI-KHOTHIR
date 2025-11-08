@@ -613,10 +613,8 @@ cout << "Hello world!" << endl;
 
 
 Struktur programnya dibagi jadi tiga file biar rapi: Stack.h, Stack.cpp, dan Main.cpp. Di file Stack.h ada deklarasi struktur stack dan daftar fungsi-fungsinya. Di Stack.cpp, semua fungsi itu diisi logikanya. Misalnya, CreateStack() buat nyiapin stack kosong, push() buat nambahin data ke atas tumpukan, dan pop() buat ngambil data paling atas. Ada juga fungsi balikStack() yang fungsinya buat ngebalik isi stack, terus pushAscending() yang otomatis nyimpen data biar urut dari kecil ke besar. Fungsi terakhir yaitu getInputStream() biar kita bisa masukin angka langsung dari keyboard dan otomatis disimpen ke dalam stack.
+Terus di file Main.cpp, semua fungsi tadi dicoba satu per satu.
 
-Terus di file Main.cpp, semua fungsi tadi dicoba satu per satu. Pertama ada stack biasa yang dites dengan push, pop, dan balikStack. Lalu ada stack dengan urutan naik (ascending) yang dites pake pushAscending(). Terakhir, ada stack yang ngambil input langsung dari user lewat getInputStream(). Di setiap bagian, hasilnya ditampilin di layar supaya kita bisa lihat perubahan isi stack sebelum dan sesudah dibalik.
-
-Dari hasil percobaan ini bisa disimpulin kalau struktur data stack itu sebenarnya sederhana tapi punya banyak manfaat. Cara kerjanya yang “masuk terakhir keluar duluan” cocok banget buat kasus seperti undo-redo, penyimpanan data sementara, atau pemanggilan fungsi berulang (recursion). Dengan pendekatan array, implementasinya jadi lebih mudah . Selain itu, fungsi tambahan seperti balikStack dan pushAscending nunjukin kalau stack bisa dikembangkan jadi lebih fleksibel dan bisa dipakai buat berbagai kebutuhan.
 
 ## Kesimpulan
 Stack itu struktur data sederhana tapi penting banget dalam dunia pemrograman, karena konsepnya sering dipakai di banyak hal kayak undo-redo, pemanggilan fungsi (recursion), sampai compiler.
