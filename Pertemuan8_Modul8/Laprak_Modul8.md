@@ -648,7 +648,7 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan7_Modul7/ScreenshotOutput_Modul7/Output_Queue.png)
+![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan8_Modul8/ScreenshotOutput_Modul8/Output_Queue.png)
 
 3 macam queue pakai array ukuran 5. Bedanya cuma di cara head dan tail bergerak.
 Alternatif 1  Head Diam, Tail Bergerak
