@@ -58,13 +58,17 @@ int hitungKedalaman(address root, int start){
     } else {
         int kiri = hitungKedalaman(root->left, start);
         int kanan = hitungKedalaman(root->right, start);
+        int kedalaman;
         if (kiri > kanan){
-            return kiri + 1;
+            kedalaman = kiri;
         } else {
-            return kanan + 1;
+            kedalaman = kanan;
         }
+        return kedalaman + 1;   
     }
+    cout << endl;
 }
+
 
 //3
 void preOrder(address root){
