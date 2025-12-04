@@ -66,12 +66,15 @@ void deleteFirstParent(ListParent &lParent);
 void deteleAfterParent(ListParent &lParent, address_parent prec);
 
 void insertFirstChild(ListChild &lChild, address_child newChild);
-void insertLasChild(ListChild &lChild, address_child newchild);
+//void insertLastChild(ListChild &lChild, address_child newchild);
+void insertLastChild(address_parent &P, address_child &C);
 
 void deleteFirstChild(ListChild &lChild);
 void deleteAfterChild(ListChild &lChild, address_child prec);
 
 void printMLLStructure(ListParent lParent);
 void deletelistchild(ListChild &lChild);
+
+void SearchByEkor(ListParent lParent, bool ekor);
 
 #endif
