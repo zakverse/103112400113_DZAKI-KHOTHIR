@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 1 - Codeblocks IDE & Pengenalan Bahas C++ (Bagian Pertama)</h1>
+# <h1 align="center">Laporan Praktikum Modul 13 - MULTI LINKED LIST</h1>
 <p align="center">DZAKI KHOTHIR - 103112400113</p>
 
 ## Dasar Teori
@@ -9,7 +9,7 @@ Berbeda dengan single linked list yang hanya memiliki pointer ke node selanjutny
 Data mahasiswa (parent) dengan daftar mata kuliah yang diambil (child)
 Data produk (parent) dengan daftar transaksi penjualan (child)
 Data kategori (parent) dengan daftar item (child)
-Dalam implementasinya, setiap elemen parent dan child biasanya dibuat menggunakan struct berbeda, dan hubungan antara keduanya dihubungkan melalui pointer next (untuk sesama parent atau sesama child) serta pointer nextChild (untuk menghubungkan parent ke anak).
+Dalam implementasinya, setiap elemen parent dan child biasanya dibuat menggunakan struct berbeda, dan hubungan antara keduanya dihubungkan melalui pointer next (untuk sesama parent atau sesama child) serta pointer nextChild (untuk menghubungkan parent ke anak).[3]
 
 MLL memiliki beberapa operasi dasar, seperti:
 Insert Parent – Menambahkan elemen parent ke dalam list.
