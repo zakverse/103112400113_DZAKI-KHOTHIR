@@ -1095,19 +1095,19 @@ int main(){
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_1.0png)
+![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_1.0.png)
 
 ##### Output 2
-![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_1.1png)
+![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_1.1.png)
 
 ##### Output 3
-![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_2.0png)
+![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_2.0.png)
 
 ##### Output 4
-![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_3.0png)
+![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_3.0.png)
 
 ##### Output 5
-![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_3.1png)
+![Screenshot Output Unguided 1_1](https://github.com/zakverse/103112400113_DZAKI-KHOTHIR/blob/main/Pertemuan13_Modul13/ScreenshotOutput_Modul13/Output_3.1.png)
 
 Kode ini mengimplementasikan struktur data Multi Linked List yang berfungsi untuk mengelola data hewan, di mana setiap Golongan Hewan bertindak sebagai Parent dan detail Hewan di bawahnya bertindak sebagai Child. Parent List ($ListParent$) adalah Doubly Linked List yang menyimpan node $nodeParent$ yang berisi data $golonganHewan$ (ID dan nama golongan) dan memiliki Doubly Linked List internal ($ListChild$) yang berisi data $dataHewan$ (ID, nama, habitat, status ekor, dan bobot). MultiLL.h mendeklarasikan semua struktur data ($golonganHewan$, $dataHewan$, $nodeChild$, $ListChild$, $nodeParent$, $ListParent$) dan prototipe fungsi untuk operasi seperti membuat list ($createListParent$, $createListChild$), alokasi/dealokasi node, serta operasi manipulasi dasar pada list Parent ($insertFirstParent$, $insertLastParent$, $deleteFirstParent$, $deteleAfterParent$) dan Child ($insertFirstChild$, $insertLastChild$, $deleteFirstChild$, $deleteAfterChild$). MultiLL.cpp menyediakan implementasi dari fungsi-fungsi tersebut, termasuk fungsi khusus untuk menampilkan seluruh struktur MLL ($printMLLStructure$) dan mencari hewan berdasarkan status ekor ($SearchByEkor$). Main.cpp berfungsi sebagai driver program, menginisialisasi $ListParent$ dan $ListChild$, membuat beberapa node Parent (Aves, Mamalia, Pisces, Amfibi, Reptil) dan Child (Hewan spesifik), kemudian menyisipkan Child ke Parent yang relevan. Setelah menampilkan seluruh struktur MLL, program mendemonstrasikan fungsi pencarian hewan berekor dan tidak berekor, dan diakhiri dengan menghapus node Parent setelah $P3$ ($deteleAfterParent(p, P3)$), dan menampilkan kembali struktur MLL yang telah diperbarui.
 
